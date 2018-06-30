@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    @@items = []
+    @@items = [Item.new("Figs",3.42)]
 
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
