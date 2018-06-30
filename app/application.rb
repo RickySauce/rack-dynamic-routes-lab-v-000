@@ -10,6 +10,7 @@ class Application
       resp.write "nice"
     else
       resp.status = 404
+    end
   end
 
 end
