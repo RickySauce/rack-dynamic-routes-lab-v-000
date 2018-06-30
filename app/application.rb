@@ -10,7 +10,7 @@ class Application
       item = req.params["item"]
       if @@items.include?(item)
         resp.write "#{item.price}"
-      else 
+      else
         resp.write "Item not found"
       end
     else
