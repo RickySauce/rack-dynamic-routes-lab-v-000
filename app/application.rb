@@ -5,6 +5,11 @@ class Application
     req = Rack::Request.new(env)
 
     @@items = []
+
+    if req.path.match(/items/)
+      resp.write "nice"
+    else
+      resp.status = 404
   end
 
 end
