@@ -6,9 +6,8 @@ class Application
 
     @@items = []
 
-    if req.path.match(/items/)
-      item = req.params["item"]
-      if @@items.include?(item)
+    if req.path == "/items/#{item.name}"
+      if @@items.include?(item.name)
         resp.write "#{item.price}"
       else
         resp.write "Item not found"
